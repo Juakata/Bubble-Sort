@@ -11,13 +11,12 @@ def bubble_sort(arr)
   sort = false
   until sort
     sort = true
-    for i in 0...arr.length-1
-      if arr[i] > arr[i+1]
-        aux = arr[i]
-        arr[i] = arr[i+1]
-        arr[i+1] = aux
-        sort = false
-      end
+    for i in 0...arr.length - 1
+      next if arr[i] < arr[i + 1]
+      aux = arr[i]
+      arr[i] = arr[i + 1]
+      arr[i + 1] = aux
+      sort = false
     end
   end
   print_arr(arr)
@@ -30,11 +29,11 @@ def bubble_sort_by(arr)
   while !sort
     sort = true
     for i in 0...arr.length-1
-      yield(arr[i], arr[i+1])
-      if arr[i].length > arr[i+1].length
+      yield(arr[i], arr[i + 1])
+      if arr[i].length > arr[i + 1].length
         aux = arr[i]
-        arr[i] = arr[i+1]
-        arr[i+1] = aux
+        arr[i] = arr[i + 1]
+        arr[i + 1] = aux
         sort = false
       end
     end

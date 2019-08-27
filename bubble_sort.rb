@@ -11,7 +11,7 @@ def bubble_sort(arr)
   sort = false
   until sort
     sort = true
-    arr.each_with_index do |value, i|
+    arr.each_with_index do |_value, i|
       next if i == arr.length - 1
 
       next if arr[i] < arr[i + 1]
@@ -31,9 +31,8 @@ def bubble_sort_by(arr)
   sort = false
   until sort
     sort = true
-    arr.each_with_index do |value, i|
+    arr.each_with_index do |_value, i|
       next if i == arr.length - 1
-      
       yield(arr[i], arr[i + 1])
       next if arr[i].length < arr[i + 1].length
 

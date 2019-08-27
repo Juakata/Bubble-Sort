@@ -1,4 +1,6 @@
-def printArr(arr)
+# frozen_string_literal: true
+
+def print_arr(arr)
   arr.each do |v|
     print v.to_s + " "
 
@@ -18,7 +20,7 @@ def bubble_sort(arr)
       end
     end
   end
-  printArr(arr)
+  print_arr(arr)
 end
 
 bubble_sort([0,-6,10,2000,5000])
@@ -37,7 +39,7 @@ def bubble_sort_by(arr)
       end
     end
   end
-  printArr(arr)
+  print_arr(arr)
 end
 bubble_sort_by(["hi","hello","hey"]) do |left,right|
 puts left.length - right.length

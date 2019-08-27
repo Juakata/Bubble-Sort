@@ -3,7 +3,6 @@
 def print_arr(arr)
   arr.each do |v|
     print v.to_s + " "
-
   end
   print "\n"
 end
@@ -42,5 +41,5 @@ def bubble_sort_by(arr)
   print_arr(arr)
 end
 bubble_sort_by(["hi","hello","hey"]) do |left,right|
-puts left.length - right.length
+  puts left.length - right.length
 end

@@ -11,7 +11,9 @@ def bubble_sort(arr)
   sort = false
   until sort
     sort = true
-    for i in 0...arr.length - 1
+    arr.each_with_index do |value, i|
+      next if i == arr.length - 1
+
       next if arr[i] < arr[i + 1]
 
       aux = arr[i]
@@ -29,7 +31,9 @@ def bubble_sort_by(arr)
   sort = false
   until sort
     sort = true
-    for i in 0...arr.length - 1
+    arr.each_with_index do |value, i|
+      next if i == arr.length - 1
+      
       yield(arr[i], arr[i + 1])
       next if arr[i].length < arr[i + 1].length
 
@@ -42,6 +46,6 @@ def bubble_sort_by(arr)
   print_arr(arr)
 end
 
-bubble_sort_by(%w["hi", "hello", "hey"]) do |left, right|
-  
+bubble_sort_by(["hi", "hello", "hey"]) do |left, right|
+  puts left.length - right.length
 end

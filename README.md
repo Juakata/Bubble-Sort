@@ -1,5 +1,5 @@
 # Bubble-Sort
-Next Project is function to sort numbers or words depending on the length, built with Ruby.
+Next Project is a function to sort numbers or words depending on the length, built with Ruby.
 
 Used: Ruby.
 
